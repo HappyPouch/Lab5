@@ -1,0 +1,85 @@
+/**
+ * CS30S/40S    Java   Hildebrandt
+ * Lab 5 Question 1    Strings - remove the word man
+ * For this question, you only need to complete the removeMan method
+ * 
+ * This program will input some phrases from a file and remove the word "man".
+ */
+
+import java.io.*;
+import java.text.*;
+import java.util.*;
+
+public class Q1RemoveMan
+{
+    private final int MAX = 50;
+    private final static String word = "man";
+    private String[] phrases;
+    private int size;
+
+    public Q1RemoveMan() throws IOException
+    // input is called in the constructor
+    // which will initialize phrases
+    {
+        size = 0;
+        input();  
+    }    
+    
+    public void doStuff()
+    // runs the program
+    {
+        System.out.println("The original phrases are: \n");
+        output(phrases);
+        String s, strNoMan;
+        String[] noManArray = new String[size];
+        for (int x = 0; x < size; x++)
+        {
+            s = phrases[x];
+            strNoMan = remove(s);
+            noManArray[x] = strNoMan;
+        }
+        System.out.println("The modified phrases without the word \"man\": \n");
+        output(noManArray);
+    }    
+
+    private void input() throws IOException
+    {
+        phrases = new String[MAX];
+        
+        Scanner inFile = new Scanner (new File("man.txt"));
+        String s;
+        
+        while (inFile.hasNext())
+        {
+            s = inFile.nextLine();
+            phrases[size] = s;
+            size++;
+        }
+    }
+        
+    private void output(String[] list)
+    {
+        for (int x = 0; x < size; x++)
+            System.out.println(list[x]);
+        System.out.println("\n");
+    }
+    
+    private String remove(String s)
+    // Your code goes here.  Remove the "return s".  It is only there to prevent error in this program.
+    {
+        int startMan = s.indexOf(word);
+        String answer = "";
+        
+        if(startMan == -1){
+            System.out.println(s);
+        }
+        else{
+            String start = s.substring(0, startMan);
+            String end = s.substring(startMan, s.length()-1);
+            
+            answer = start + end;
+        }
+        
+        return answer;
+    }        
+}//End RemoveMan
