@@ -1,0 +1,70 @@
+
+/**
+ * UsesStrings - complete functions using Strings
+ * 
+ * Hildebrandt - Lab 5 Strings - palindromes, allVowelsInOrder, Dupledrome, americanize
+ * 
+ */
+
+public class Q2UsesStrings
+{
+    //isPalindrome: String --> boolean
+    // hint: change everything to lower case
+    public static boolean isPalindrome(String s)
+    {
+        s = s.toLowerCase();
+        
+        char first = s.charAt(0);
+        char last = s.charAt(s.length()-1);
+        String middle = "";
+        // JUST MAKE THE LAST LETTER NOT EXXIST
+        for(int x = s.length()-1; x >= 1; x--){
+            middle += s.charAt(x);
+        }
+        System.out.println(middle + "middle");
+
+        String answer = last + middle + first;
+        
+        if(s.equals(answer)){
+            return true;
+        }
+        
+        return false;
+    }
+
+    // return true if all 5 vowels are present and in order
+    // example: facetious --> should be true
+    public static boolean allVowelsInOrder(String s)
+    {
+        return true;
+    }
+
+    // isDupledrome: String --> boolean
+    // returns true if all letters occur as doubles eg. "aabbccdd" --> should be true
+    public static boolean isDupledrome(String word)
+    {
+        System.out.println(word);
+
+        return true;
+    }   
+
+    // 
+    public static int americanize(String postal)
+    {
+        return 0;
+    }
+
+    // Bonus - do after Q3 is done
+    //isPunctuationPalindrome: String --> boolean
+    // Madam I'm Adam --> should be true
+    // ignore spaces and punctuation - if palindrome then true.
+    // Hint: create a new String that only has the letters contained in s and 
+    //     then call the isPalindrome function.
+    public static boolean isPunctuationPalindrome(String s)
+    {
+
+        return true;
+    }
+
+}
+
