@@ -24,7 +24,7 @@ public class Q1RemoveMan
         size = 0;
         input();  
     }    
-    
+
     public void doStuff()
     // runs the program
     {
@@ -45,10 +45,10 @@ public class Q1RemoveMan
     private void input() throws IOException
     {
         phrases = new String[MAX];
-        
+
         Scanner inFile = new Scanner (new File("man.txt"));
         String s;
-        
+
         while (inFile.hasNext())
         {
             s = inFile.nextLine();
@@ -56,28 +56,27 @@ public class Q1RemoveMan
             size++;
         }
     }
-        
+
     private void output(String[] list)
     {
         for (int x = 0; x < size; x++)
             System.out.println(list[x]);
         System.out.println("\n");
     }
-    
+
     private String remove(String s)
     // Your code goes here.  Remove the "return s".  It is only there to prevent error in this program.
     {
         int startMan = s.indexOf(word);
-        String answer = "";
+        String answer = s;
         
-        if(startMan == -1){
-            System.out.println(s);
-        }
-        else{
+        if(startMan != - 1){
             String start = s.substring(0, startMan);
-            String end = s.substring(startMan, s.length()-1);
+            String end = s.substring(startMan + 3, s.length());
             
             answer = start + end;
+            
+            startMan = -1;
         }
         
         return answer;
