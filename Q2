@@ -14,18 +14,15 @@ public class Q2UsesStrings
     {
         s = s.toLowerCase();
         
-        char first = s.charAt(0);
-        char last = s.charAt(s.length()-1);
-        String middle = "";
-        // JUST MAKE THE LAST LETTER NOT EXXIST
-        for(int x = s.length()-1; x >= 1; x--){
-            middle += s.charAt(x);
-        }
-        System.out.println(middle + "middle");
-
-        String answer = last + middle + first;
+        String palindromeCheck = "";
         
-        if(s.equals(answer)){
+        for(int x = s.length()-1; x >= 0; x--){
+            palindromeCheck += s.charAt(x);
+        }
+        
+        //System.out.println("" + palindromeCheck + "check");   // print the comparison
+        
+        if(s.equals(palindromeCheck)){
             return true;
         }
         
@@ -36,15 +33,30 @@ public class Q2UsesStrings
     // example: facetious --> should be true
     public static boolean allVowelsInOrder(String s)
     {
-        return true;
+        int index = 0;
+        String vowels = "aeiou";
+        
+        for(int n = 0; n < s.length(); n++){
+            if(s.charAt(n) == vowels.charAt(index)){
+                index++;
+                if(index == 5){
+                    return true;
+                }
+            }
+        }
+        
+        return false;
     }
 
     // isDupledrome: String --> boolean
     // returns true if all letters occur as doubles eg. "aabbccdd" --> should be true
     public static boolean isDupledrome(String word)
     {
-        System.out.println(word);
-
+        
+        for(int n = 0; n < word.length(); n++){
+            int index = fruit.indexOf(n);
+        }
+            
         return true;
     }   
 
