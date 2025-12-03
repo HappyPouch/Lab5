@@ -1,0 +1,43 @@
+/**
+ * Lab 5 Strings Q3
+ * CryptoQuote.
+ * 
+ * Hildebrandt
+ */
+public class Q3CryptoQuote
+{
+    private int shift;
+
+    public Q3CryptoQuote(int s)
+    {
+        shift = s;
+    }
+
+    public int getShift()
+    {
+        return shift;
+    }
+
+    public String decrypt(String cipher)
+    {
+        
+        
+        return cipher;
+    }
+
+    public String encrypt(String phrase)
+    {
+        int ASCIIvalue = 0;
+        
+        for(int i = 0; i < phrase.length(); i++){
+            char ch = phrase.charAt(i);
+            
+            int numCh = ch;
+        
+            System.out.println((int)ch + 2);
+        }
+        
+        return phrase;
+    }
+}
+
