@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Q1RemoveMan
+comment1.params=
+comment1.target=Q1RemoveMan()
+comment2.params=
+comment2.target=void\ doStuff()
+comment3.params=
+comment3.target=void\ input()
+comment4.params=list
+comment4.target=void\ output(java.lang.String[])
+comment5.params=s
+comment5.target=java.lang.String\ remove(java.lang.String)
+numComments=6

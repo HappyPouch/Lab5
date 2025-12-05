@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Q2UsesStrings
+comment0.text=\n\ UsesStrings\ -\ complete\ functions\ using\ Strings\n\ \n\ Hildebrandt\ -\ Lab\ 5\ Strings\ -\ palindromes,\ allVowelsInOrder,\ Dupledrome,\ americanize\n\ \n
+comment1.params=s
+comment1.target=boolean\ isPalindrome(java.lang.String)
+comment2.params=s
+comment2.target=boolean\ allVowelsInOrder(java.lang.String)
+comment3.params=word
+comment3.target=boolean\ isDupledrome(java.lang.String)
+comment4.params=postal
+comment4.target=java.lang.String\ americanize(java.lang.String)
+comment5.params=s
+comment5.target=boolean\ isPunctuationPalindrome(java.lang.String)
+numComments=6

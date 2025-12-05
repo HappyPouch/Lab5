@@ -1,0 +1,4 @@
+hello world
+I love computer science
+reverse this
+a b c

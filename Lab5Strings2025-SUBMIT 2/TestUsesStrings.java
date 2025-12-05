@@ -1,0 +1,91 @@
+
+/**
+ * TestClass - to test UsesStrings
+ */
+
+import java.util.*;
+import java.io.*;
+public class TestUsesStrings
+{
+
+    public static void main(String[]args) throws IOException
+    {
+        //create an new object of the UsesStrings class
+        Q2UsesStrings us = new Q2UsesStrings();
+
+        Scanner input = new Scanner(new File("phrases.txt"));
+        Scanner input2 = new Scanner(System.in);
+        System.out.println("*****isPalindrome*****");
+        String s;
+        while(input.hasNext())
+        {
+            s = input.nextLine();
+            System.out.print(s);
+            if (us.isPalindrome(s))
+                System.out.println(" is a palindrome.");
+            else
+                System.out.println(" is not a palindrome.");
+        }        
+        System.out.println();
+
+        input = new Scanner(new File("phrases2.txt"));
+        System.out.println("*****isPunctuationPalindrome*****");
+        while(input.hasNext())
+        {
+            s = input.nextLine();
+            System.out.print(s);
+            if (us.isPunctuationPalindrome(s))
+                System.out.println(" is a palindrome.");
+            else
+                System.out.println(" is not a palindrome.");
+        }        
+
+        System.out.println();
+        System.out.println("Hit Enter to move to next function");
+        s = input2.nextLine();//pause
+        
+        input = new Scanner(new File("phrases3b.txt"));
+        System.out.println("*****allVowelsInOrder*****");
+        while(input.hasNext())
+        {
+            s = input.nextLine();
+            System.out.print(s);
+            if (us.allVowelsInOrder(s))
+                System.out.println(": all vowels are present and in order.");
+            else
+                System.out.println(": all vowels are not present and / or not in order.");
+        }        
+
+        System.out.println();
+        System.out.println("Hit Enter to move to next function");
+        s = input2.nextLine();//pause
+
+        input = new Scanner(new File("phrases4.txt"));
+        System.out.println("*****isDupledrome*****");
+        while(input.hasNext())
+        {
+            s = input.nextLine();
+            System.out.print(s);
+            if (us.isDupledrome(s))
+                System.out.println(" is a Dupledrome word.");
+            else
+                System.out.println(" is not a Dupledrome word.");
+        }   
+        
+
+        System.out.println();
+        System.out.println("Hit Enter to move to next function");
+        s = input2.nextLine();//pause
+
+        input = new Scanner(new File("usa.txt"));
+        System.out.println("*****Americanize postal codes*****");
+        while(input.hasNext())
+        {
+            s = input.nextLine();
+            System.out.print(s + "  -->  ");
+            System.out.println(us.americanize(s));
+        }   
+        
+    }  
+
+}

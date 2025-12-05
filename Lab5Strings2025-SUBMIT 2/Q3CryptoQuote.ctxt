@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Q3CryptoQuote
+comment0.text=\n\ Lab\ 5\ Strings\ Q3\n\ CryptoQuote.\n\ \n\ Savi\ K.\n
+comment1.params=s
+comment1.target=Q3CryptoQuote(int)
+comment2.params=
+comment2.target=int\ getShift()
+comment3.params=cipher
+comment3.target=java.lang.String\ decrypt(java.lang.String)
+comment4.params=phrase
+comment4.target=java.lang.String\ encrypt(java.lang.String)
+numComments=5

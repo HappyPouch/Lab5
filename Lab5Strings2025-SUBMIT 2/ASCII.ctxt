@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=ASCII
+comment0.text=\n\ Hildebrandt\n\ Print\ out\ the\ ascii\ codes\ for\ a\ variety\ of\ different\ symbols\n\ Casting\ char\ as\ an\ int\n
+comment1.params=
+comment1.target=void\ main()
+numComments=2
