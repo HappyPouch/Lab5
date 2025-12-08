@@ -89,3 +89,17 @@ public class TestUsesStrings
     }  
 
 }
+
+String noPunct = "";
+        
+        for(int i = 0; i < s.length(); i++){
+            char ch = s.charAt(i);
+            
+            // check capitals and lowercase letters to add to no punctuation variable
+            if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+                noPunct += ch;
+            }
+        }
+        
+        // check if palindrome
+        return isPalindrome(noPunct);
