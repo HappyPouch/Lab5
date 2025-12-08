@@ -20,24 +20,73 @@ public class Q3CryptoQuote
 
     public String decrypt(String cipher)
     {
+        String result = "";
         
+        for(int charIndex = 0; charIndex < cipher.length(); charIndex++){
+            char ch = cipher.charAt(charIndex);
+            // do opposite of encrypt
+            // look at lowercase
+            if(ch >= 'a' && ch <= 'z') {
+                char shiftLetter = (char)(ch - shift);
+                
+                if (shiftLetter < 'a') {
+                    shiftLetter += 26;
+                }
+                
+                result += shiftLetter;
+            }
+            // look at uppercase -- comment out if not needed
+            else if(ch >= 'A' && ch <= 'Z'){
+                char shiftLetter = (char)(ch - shift);
+                
+                if(shiftLetter < 'A'){
+                    shiftLetter += 26;
+                }
+                
+                result += shiftLetter;
+            }
+            // not a letter
+            else{
+                result += ch;
+            }
+        }
         
-        return cipher;
+        return result;
     }
 
     public String encrypt(String phrase)
     {
-        int ASCIIvalue = 0;
+        String result = "";
         
-        for(int i = 0; i < phrase.length(); i++){
-            char ch = phrase.charAt(i);
+        for(int charIndex = 0; charIndex < phrase.length(); charIndex++){
+            char ch = phrase.charAt(charIndex);
             
-            int numCh = ch;
-        
-            System.out.println((int)ch + 2);
+            // look at lowercase
+            if(ch >= 'a' && ch <= 'z'){
+                char shiftLetter = (char)(ch + shift);
+                
+                if(shiftLetter > 'z'){
+                    shiftLetter -= 26;
+                }
+                
+                result += shiftLetter;
+            }
+            // look at uppercase -- comment out if not needed
+            else if(ch >= 'A' && ch <= 'Z'){
+                char shiftLetter = (char)(ch + shift);
+                
+                if(shiftLetter > 'Z'){
+                    shiftLetter -= 26;
+                }
+                
+                result += shiftLetter;
+            }
+            // not a letter
+            else{
+                result += ch;
+            }
         }
         
-        return phrase;
+        return result;
     }
 }
-
